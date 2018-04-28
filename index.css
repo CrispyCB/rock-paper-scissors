@@ -1,0 +1,17 @@
+body {background-color: #718087;}
+p {
+    font-family: 'Titan One', cursive;
+    padding-top: 50px;
+}
+button {
+    height: 100px;
+    width: 100px;
+}
+#gameShell {
+    width: 500px;
+    height: 500px;
+    background-color: #e9e8dd;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
