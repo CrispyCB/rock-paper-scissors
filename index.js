@@ -61,13 +61,13 @@ function round (ComputerSelection,PlayerSelection){
     return "You win! Scissors beats Paper!" ;
   }
   if (ComputerSelection == "PAPER" && PlayerSelection == "ROCK"){
-    return "You win! Paper beats Rock!";
+    return "You lose! Paper beats Rock!";
   }
   if (ComputerSelection == "SCISSORS" && PlayerSelection == "PAPER"){
     return "You lose! Scissors beats Paper!";
   }
   if (ComputerSelection == "SCISSORS" && PlayerSelection == "ROCK"){
-    return "You win! ROCK beats SCISSORS!";
+    return "You win! Rock beats Scissors!";
   }
   if (ComputerSelection == PlayerSelection) {
     return "It's a tie!"
