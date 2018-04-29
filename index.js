@@ -39,12 +39,6 @@
  let ComputerSelection;
  let PlayerSelection;
  let Select;
- document.addEventListener('DOMContentLoaded', () => {
-function startGame() {
-  document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
-   document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
- }
- startGame();});
  function ComputerPlay(){
   var CompSelect = ["ROCK", "PAPER", "SCISSORS"];
   var rand = CompSelect[Math.floor(Math.random() * CompSelect.length)];
@@ -56,3 +50,33 @@ function PlayerChoice (Select){
   PlayerSelection = Select.toUpperCase();
   return PlayerSelection;
 }
+function round (ComputerSelection,PlayerSelection){
+  if (ComputerSelection == "ROCK" && PlayerSelection == "SCISSORS"){
+    return "You lose! Rock beats Scissors!";
+  }
+  if (ComputerSelection == "ROCK" && PlayerSelection == "PAPER"){
+  return "You win! Paper beats Rock!";
+  }
+  if (ComputerSelection == "PAPER" && PlayerSelection == "SCISSORS"){
+    return "You win! Scissors beats Paper!" ;
+  }
+  if (ComputerSelection == "PAPER" && PlayerSelection == "ROCK"){
+    return "You win! Paper beats Rock!";
+  }
+  if (ComputerSelection == "SCISSORS" && PlayerSelection == "PAPER"){
+    return "You lose! Scissors beats Paper!";
+  }
+  if (ComputerSelection == "SCISSORS" && PlayerSelection == "ROCK"){
+    return "You win! ROCK beats SCISSORS!";
+  }
+  if (ComputerSelection == PlayerSelection) {
+    return "It's a tie!"
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  function startGame() {
+    document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
+    document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
+    document.querySelector("#rdisplay").innerHTML = " " + round (ComputerSelection,PlayerSelection);
+   }
+   startGame();});
