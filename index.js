@@ -1,4 +1,4 @@
-function ComputerPlay(){
+/*function ComputerPlay(){
     var CompSelect = ["ROCK", "PAPER", "SCISSORS"];
     var rand = CompSelect[Math.floor(Math.random() * CompSelect.length)];
     ComputerSelection = rand;
@@ -35,3 +35,24 @@ function ComputerPlay(){
     }
   }
   console.log(round(ComputerSelection,PlayerSelection));
+  */
+ let ComputerSelection;
+ let PlayerSelection;
+ let Select;
+ document.addEventListener('DOMContentLoaded', () => {
+function startGame() {
+   document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
+   document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
+ }
+ startGame();});
+ function ComputerPlay(){
+  var CompSelect = ["ROCK", "PAPER", "SCISSORS"];
+  var rand = CompSelect[Math.floor(Math.random() * CompSelect.length)];
+  ComputerSelection = rand;
+  return ComputerSelection;
+}
+function PlayerChoice (Select){
+  Select = prompt("Choose ROCK, PAPER or SCISSORS");
+  PlayerSelection = Select.toUpperCase();
+  return PlayerSelection;
+}
