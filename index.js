@@ -41,8 +41,8 @@
  let Select;
  document.addEventListener('DOMContentLoaded', () => {
 function startGame() {
+  document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
    document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
-   document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
  }
  startGame();});
  function ComputerPlay(){
