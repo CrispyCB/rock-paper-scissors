@@ -28,3 +28,9 @@ span {
     float: left;
     width: 50%;
 }
+#round {
+    margin: 0 auto;
+}
+#rnd-box{
+text-align: center
+}
