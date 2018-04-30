@@ -89,5 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
     document.querySelector("#rdisplay").innerHTML = " " + round (ComputerSelection,PlayerSelection);
     document.querySelector("#sdisplay").innerHTML = " " + playerScore;
-   }
+    document.querySelector("#cdisplay").innerHTML = " " + computerScore;
+  }
    startGame();});
