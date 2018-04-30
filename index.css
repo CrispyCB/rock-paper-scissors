@@ -7,6 +7,9 @@ button {
     height: 100px;
     width: 100px;
 }
+span {
+    font-family: 'Titan One', cursive;
+}
 #gameShell {
     width: 500px;
     height: 500px;
