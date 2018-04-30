@@ -10,6 +10,11 @@ button {
 span {
     font-family: 'Titan One', cursive;
 }
+#cscore {
+    padding-top: 0;
+    float: right;
+    width: 50%;
+}
 #gameShell {
     width: 500px;
     height: 500px;
@@ -17,4 +22,9 @@ span {
     border-radius: 5px;
     text-align: center;
     margin: 0 auto;
+}
+#pscore {
+    padding-top: 0;
+    float: left;
+    width: 50%;
 }
