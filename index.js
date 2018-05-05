@@ -56,6 +56,7 @@ function PlayerChoice (Select){
 function round (ComputerSelection,PlayerSelection){
 playerScore = 0;
 computerScore = 0;
+rndCnt = 0;
   if (ComputerSelection == "ROCK" && PlayerSelection == "SCISSORS"){
     computerScore++;
     rndCnt++;
@@ -91,13 +92,15 @@ computerScore = 0;
     return "It's a tie!"
   }
 }
+function startGame() {
+  document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
+  document.querySelector("#rdisplay").innerHTML = " " + round (ComputerSelection,PlayerSelection);
+  document.querySelector("#sdisplay").innerHTML = " " + playerScore;
+  document.querySelector("#cdisplay").innerHTML = " " + computerScore;
+  document.querySelector("#round").innerHTML += " " + rndCnt;
+}
 document.addEventListener('DOMContentLoaded', () => {
-  function startGame() {
-    document.querySelector("#pchoice").innerHTML = PlayerChoice(Select);
-    document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
-    document.querySelector("#rdisplay").innerHTML = " " + round (ComputerSelection,PlayerSelection);
-    document.querySelector("#sdisplay").innerHTML = " " + playerScore;
-    document.querySelector("#cdisplay").innerHTML = " " + computerScore;
-    document.querySelector("#round").innerHTML = " " + rndCnt;
-  }
-   startGame();});
+for (var r = 0; r < 5; r++){
+   startGame();
+}
+  });
