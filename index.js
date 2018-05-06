@@ -55,11 +55,12 @@ rndCnt = 0;
   }
 }
 function startGame() {
+  document.querySelector("#pchoice").innerHTML = PlayerChoice (Select);  
   document.querySelector("#cchoice").innerHTML = ComputerPlay(ComputerSelection);
   document.querySelector("#rdisplay").innerHTML = " " + round (ComputerSelection,PlayerSelection);
   document.querySelector("#sdisplay").innerHTML = " " + playerScore;
   document.querySelector("#cdisplay").innerHTML = " " + computerScore;
-  document.querySelector("#round").innerHTML += " " + rndCnt;
+  document.querySelector("#round").innerHTML + " " + rndCnt;
 }
 document.addEventListener('DOMContentLoaded', () => {
 for (var r = 0; r < 5; r++){
