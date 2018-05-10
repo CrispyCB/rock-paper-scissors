@@ -29,7 +29,7 @@ computerScore = 0;
 rndCnt = 0;
 if (ComputerSelection == "ROCK" && PlayerSelection == "SCISSORS") {
 computerScore++;
-++rndCnt;
+rndCnt++;
 return "You lose! Rock beats Scissors!";
 }
 if (ComputerSelection == "ROCK" && PlayerSelection == "PAPER") {
