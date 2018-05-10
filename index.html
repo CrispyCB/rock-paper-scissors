@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <script src="index.js"></script>
 </head>
+
 <body>
     <div id="gameShell">
-        <p id="computerChoice">The computer's choice is:<br><span id="cchoice">Nothing</span></p>
-      <!--  <button id="rock"><i class="fas fa-hand-rock fa-5x btn"></i></button>
-        <button id="paper"><i class="fas fa-hand-paper fa-5x"></i></button>
-        <button id="scissors"><i class="fas fa-hand-scissors fa-5x btn"></i></button> -->
-        <p id="playerChoice">Your choice is:<br><span id="pchoice">Nothing</span></p>
-        <p id="result">The result is:<span id="rdisplay"></span></p>
+        <p id="computerChoice">The computer's choice is:
+            <br>
+            <span id="cchoice">Nothing</span>
+        </p>
+        <button onclick="PlayerChoice('ROCK');" id="rock">
+            <i class="fas fa-hand-rock fa-5x btn"></i>
+        </button>
+        <button onclick="PlayerChoice('PAPER');" id="paper">
+            <i class="fas fa-hand-paper fa-5x"></i>
+        </button>
+        <button onclick="PlayerChoice('SCISSORS');" id="scissors">
+            <i class="fas fa-hand-scissors fa-5x btn"></i>
+        </button>
+        <p id="playerChoice">Your choice is:
+            <br>
+            <span id="pchoice">Nothing</span>
+        </p>
+        <p id="result">The result is:
+            <span id="rdisplay"></span>
+        </p>
         <div id="scores">
-        <div id="pscore"><p>Your score is:</p><span id="sdisplay">0</span></div>
-        <div id="cscore"><p>The computer's<br> score is:</p><span id="cdisplay">0</span></div>
+            <div id="pscore">
+                <p>Your score is:</p>
+                <span id="sdisplay">0</span>
+            </div>
+            <div id="cscore">
+                <p>The computer's
+                    <br> score is:</p>
+                <span id="cdisplay">0</span>
+            </div>
         </div>
         <div id="rnd-box">
-        <p id="round">The current round is:<span id="rnd-display">0</span></p>    
+            <p id="round">The current round is:
+                <span id="rnd-display">0</span>
+            </p>
         </div>
     </div>
 </body>
+
 </html>
