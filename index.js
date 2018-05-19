@@ -1,6 +1,11 @@
 
-'use strict';
-
+"use strict";
+const choices = [
+"Rock",
+"Paper",
+"Scissors"
+]
+let rand = choices[Math.floor(Math.random() * choices.length)];
 let ComputerSelection;
 let PlayerSelection;
 let Select;
@@ -9,58 +14,38 @@ let computerScore = 0;
 let rndCnt = 0;
 
 function ComputerPlay() {
-var CompSelect = ["ROCK", "PAPER", "SCISSORS"];
-var rand = CompSelect[Math.floor(Math.random() * CompSelect.length)];
 ComputerSelection = rand;
 return ComputerSelection;
 }
 
 function PlayerChoice(Choice){
-//Select = prompt("Choose ROCK, PAPER or SCISSORS");
-//PlayerSelection = Select.toUpperCase();
 PlayerSelection = Choice;
 ComputerPlay();
 Display(round());
 }
 
 function round() {
-if (ComputerSelection == "ROCK" && PlayerSelection == "SCISSORS") {
-computerScore++;
-rndCnt++;
-return "You lose! Rock beats Scissors!";
-}
-if (ComputerSelection == "ROCK" && PlayerSelection == "PAPER") {
-playerScore++;
-rndCnt++;
-return "You win! Paper beats Rock!";
-}
-if (ComputerSelection == "PAPER" && PlayerSelection == "SCISSORS") {
-playerScore++;
-rndCnt++;
-return "You win! Scissors beats Paper!";
-}
-if (ComputerSelection == "PAPER" && PlayerSelection == "ROCK") {
-computerScore++;
-rndCnt++;
-return "You lose! Paper beats Rock!";
-}
-if (ComputerSelection == "SCISSORS" && PlayerSelection == "PAPER") {
-computerScore++;
-rndCnt++;
-return "You lose! Scissors beats Paper!";
-}
-if (ComputerSelection == "SCISSORS" && PlayerSelection == "ROCK") {
-playerScore++;
-rndCnt++;
-return "You win! Rock beats Scissors!";
-}
-if (ComputerSelection == PlayerSelection) {
-rndCnt++;
-return "It's a tie!"
+
+switch (true) {
+  case ComputerSelection == choices[0] && PlayerSelection == choices[2]:
+  case ComputerSelection == choices[1] && PlayerSelection == choices[0]:
+  case ComputerSelection == choices[2] && PlayerSelection == choices[1]:
+    rndCnt++;
+    computerScore++;
+    return "You lose! " + ComputerSelection + " beats " + PlayerSelection + "!";
+  case ComputerSelection == choices[2] && PlayerSelection == choices[0]:
+  case ComputerSelection == choices[0] && PlayerSelection == choices[1]:
+  case ComputerSelection == choices[1] && PlayerSelection == choices[2]:
+      rndCnt++;
+      playerScore++;
+      return "You win! " + PlayerSelection + " beats " + ComputerSelection + "!";
+  default:
+    rndCnt++;
+    return "It's a tie!"
 }
 }
 
-function Display() {
+function Display(result) {
 document.querySelector("#pchoice").innerHTML = PlayerSelection;
 document.querySelector("#cchoice").innerHTML = ComputerSelection;
 document.querySelector("#rdisplay").innerHTML = " " + result;
@@ -70,6 +55,6 @@ document.querySelector("#round").innerHTML = "The current round is: " + rndCnt;
 }
 function startGame (){
   for (var r = 0; r < 5; r++) {
-    Display()
+    Display(result)
   }
 }
