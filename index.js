@@ -60,7 +60,7 @@ return "It's a tie!"
 }
 }
 
-function Display(result) {
+function Display() {
 document.querySelector("#pchoice").innerHTML = PlayerSelection;
 document.querySelector("#cchoice").innerHTML = ComputerSelection;
 document.querySelector("#rdisplay").innerHTML = " " + result;
@@ -70,6 +70,6 @@ document.querySelector("#round").innerHTML = "The current round is: " + rndCnt;
 }
 function startGame (){
   for (var r = 0; r < 5; r++) {
-    Display(result)
+    Display()
   }
 }
