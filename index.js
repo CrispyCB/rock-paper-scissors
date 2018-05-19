@@ -4,9 +4,9 @@
 let ComputerSelection;
 let PlayerSelection;
 let Select;
-let playerScore;
-let computerScore;
-let rndCnt;
+let playerScore = 0;
+let computerScore = 0;
+let rndCnt = 0;
 
 function ComputerPlay() {
 var CompSelect = ["ROCK", "PAPER", "SCISSORS"];
@@ -24,9 +24,6 @@ Display(round());
 }
 
 function round() {
-playerScore = 0;
-computerScore = 0;
-rndCnt = 0;
 if (ComputerSelection == "ROCK" && PlayerSelection == "SCISSORS") {
 computerScore++;
 rndCnt++;
@@ -69,7 +66,7 @@ document.querySelector("#cchoice").innerHTML = ComputerSelection;
 document.querySelector("#rdisplay").innerHTML = " " + result;
 document.querySelector("#sdisplay").innerHTML = " " + playerScore;
 document.querySelector("#cdisplay").innerHTML = " " + computerScore;
-document.querySelector("#round").innerHTML + " " + rndCnt;
+document.querySelector("#round").innerHTML = "The current round is: " + rndCnt;
 }
 function startGame (){
   for (var r = 0; r < 5; r++) {
