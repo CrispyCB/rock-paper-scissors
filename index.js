@@ -5,7 +5,6 @@ const choices = [
 "Paper",
 "Scissors"
 ]
-let rand = choices[Math.floor(Math.random() * choices.length)];
 let ComputerSelection;
 let PlayerSelection;
 let Select;
@@ -14,6 +13,7 @@ let computerScore = 0;
 let rndCnt = 0;
 
 function ComputerPlay() {
+var rand = choices[Math.floor(Math.random() * choices.length)];
 ComputerSelection = rand;
 return ComputerSelection;
 }
